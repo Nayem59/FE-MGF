@@ -1,1 +1,0 @@
-# MGF-Junior-Web-Developer-Exercise
