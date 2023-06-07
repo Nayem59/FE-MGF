@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-color: rgb(173, 173, 173);
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.all-contacts {
+  margin-top: 50px;
+}
