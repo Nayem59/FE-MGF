@@ -54,7 +54,10 @@ const AllContacts = () => {
                   <td>{contact.email}</td>
                   <td>{contact.company.name}</td>
                   <td>
-                    <Link to={`/editcontact/${contact.contact_id}`} className="link">
+                    <Link
+                      to={`/editcontact/${contact.contact_id}`}
+                      className="link"
+                    >
                       <FaEdit size="25px" />
                     </Link>
                   </td>

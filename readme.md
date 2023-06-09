@@ -1,32 +1,19 @@
-## MGF Junior Web Developer Exercise
+# FE-MGF
 
-To help applicants showcase their web skills we have devised this short exercise
-around contact details. 
+I have build a Contact Manager site with React using axios. You can display contacts, add a new contact, edit an existing contact and check number of contacts in each area.
 
-Included are a JSON file and an SQL file containing a number of contact records,
-(contact data is randomly generated, any similarity with real people is coincidental)
-you should use the data for the exercise, it is okay to edit the structure as needed.
+### Important Notes:
 
-Choose 6 of the following, feel free to mix frontend and backend if you wish. 
+You will need to have the back end server running (on localhost:9090) before you run the react site (on localhost:3000) and have Node.js v19.3.0 or later!
+Link to the back end repo: [here](https://github.com/Nayem59/BE-MGF)
 
-### Frontend
+### Getting started
 
-1. Display the contacts
-2. Implement sorting & filtering of contacts
-3. A form to add a new contact
-4. A form to edit an existing contact
-5. A report to show the number of contacts in each area
-6. Unit test(s)
+First clone this repository to your local machine and `cd` into the `tech-test` folder.
+Next use `npm install` to install all dependencies.
 
+### Running the site
 
-### Backend JSON API
+Please use the following command to run the site on localhost:3000 :
 
-1. Load contacts from the database 
-2. Implement a sorting & filtering of contacts
-3. Code to add a new contact to the database
-4. Code to update a contact in the database
-5. Return the number of contacts in each area
-6. Unit test(s)
-
-To submit your completed exercise, upload your completed code, along with any setup instructions,
-to a public git repository and send the url back to us.
+`npm start`
