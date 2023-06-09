@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaAddressBook } from "react-icons/fa";
 import { getContacts } from "../api/api";
+import { Link } from "react-router-dom";
 
 const AllContacts = () => {
   const [contacts, setContacts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  console.log(contacts, "contacts");
+  const [err, setErr] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
-    getContacts().then((data) => {
-      setContacts(data);
-      setIsLoading(false);
-    });
+    getContacts()
+      .then((data) => {
+        setContacts(data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setErr(err.message);
+        setIsLoading(false);
+      });
   }, []);
+
+  if (err) {
+    return <h2>{err}</h2>;
+  }
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -23,6 +32,12 @@ const AllContacts = () => {
   return (
     <div className="all-contacts">
       <h2>All Contacts</h2>
+      <div>
+        <p>ADD A NEW CONTACT</p>
+        <Link to="/newcontact">
+          <FaAddressBook />
+        </Link>
+      </div>
       <div className="contacts-container">
         <table className="contacts-table">
           <thead>

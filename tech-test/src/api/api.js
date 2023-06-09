@@ -9,3 +9,9 @@ export const getContacts = () => {
     return data.contacts;
   });
 };
+
+export const postContact = (obj) => {
+  return beMGF.post("/contacts", obj).then(({ data }) => {
+    return data.contact;
+  });
+};
