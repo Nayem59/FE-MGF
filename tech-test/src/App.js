@@ -1,11 +1,15 @@
 import "./App.css";
 import AllContacts from "./components/AllContacts";
+import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <h1>Contact Manager</h1>
-      <AllContacts />
+      <Header />
+      <Routes>
+        <Route path="/" element={<AllContacts />} />
+      </Routes>
     </div>
   );
 }
