@@ -107,9 +107,9 @@ const EditContact = () => {
             <option value={8}>Example Design Ltd</option>
           </select>
         </label>
-        <input type="submit" value="Save" />
+        <input type="submit" value="Save" className="btn"/>
       </form>
-      <button onClick={handleBack}>back</button>
+      <button onClick={handleBack} className="back">back</button>
     </div>
   );
 };

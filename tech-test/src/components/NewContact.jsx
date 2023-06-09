@@ -79,9 +79,9 @@ const NewContact = () => {
             <option value={8}>Example Design Ltd</option>
           </select>
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" className="btn"/>
       </form>
-      <button onClick={handleBack}>back</button>
+      <button onClick={handleBack} className="back">back</button>
     </div>
   );
 };

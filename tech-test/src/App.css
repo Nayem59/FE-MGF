@@ -12,13 +12,20 @@ h1 {
   margin-top: 50px;
 }
 
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 table {
-  width: 100%;
+  width: 80%;
   background-color: #ffffff;
   border-collapse: collapse;
   border-width: 5px;
   border-style: solid;
   color: #000000;
+  box-shadow: rgb(75, 75, 75) 10px 10px 10px;
 }
 
 td,
@@ -26,7 +33,7 @@ th {
   border-width: 5px;
   border-color: #4f4f4f;
   border-style: solid;
-  padding: 5px;
+  padding: 10px;
 }
 
 thead {
@@ -60,4 +67,41 @@ thead {
 
 p {
   padding: 0px 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px;
+  border-radius: 10px;
+  box-shadow: rgb(75, 75, 75) 10px 10px 10px;
+  margin: 10px 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(167, 167, 167);
+}
+
+label {
+  padding: 15px;
+}
+
+.back {
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.back:hover {
+  background-color: rgb(167, 167, 167);
 }

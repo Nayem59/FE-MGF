@@ -60,7 +60,7 @@ const AreaContacts = () => {
           </tbody>
         </table>
       </div>
-      <button onClick={handleBack}>back</button>
+      <button onClick={handleBack} className="back">back</button>
     </div>
   );
 };
