@@ -35,7 +35,7 @@ const AllContacts = () => {
       <div>
         <p>ADD A NEW CONTACT</p>
         <Link to="/newcontact">
-          <FaAddressBook />
+          <FaAddressBook size="30px" />
         </Link>
       </div>
       <div className="contacts-container">
@@ -60,7 +60,9 @@ const AllContacts = () => {
                   <td>{contact.email}</td>
                   <td>{contact.company.name}</td>
                   <td>
-                    <FaEdit />
+                    <Link to={`/editcontact/${contact.contact_id}`}>
+                      <FaEdit size="25px" />
+                    </Link>
                   </td>
                 </tr>
               );

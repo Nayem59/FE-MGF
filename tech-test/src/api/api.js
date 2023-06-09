@@ -10,8 +10,20 @@ export const getContacts = () => {
   });
 };
 
+export const getContact = (id) => {
+  return beMGF.get(`/contacts/${id}`).then(({ data }) => {
+    return data.contact;
+  });
+};
+
 export const postContact = (obj) => {
   return beMGF.post("/contacts", obj).then(({ data }) => {
+    return data.contact;
+  });
+};
+
+export const patchContact = (id, obj) => {
+  return beMGF.patch(`/contacts/${id}`, obj).then(({ data }) => {
     return data.contact;
   });
 };
