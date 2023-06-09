@@ -27,3 +27,9 @@ export const patchContact = (id, obj) => {
     return data.contact;
   });
 };
+
+export const getAreaContacts = () => {
+  return beMGF.get("/area").then(({ data }) => {
+    return data.companies;
+  });
+};

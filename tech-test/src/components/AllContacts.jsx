@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaEdit, FaAddressBook } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
 import { getContacts } from "../api/api";
 import { Link } from "react-router-dom";
 
@@ -32,12 +32,6 @@ const AllContacts = () => {
   return (
     <div className="all-contacts">
       <h2>All Contacts</h2>
-      <div>
-        <p>ADD A NEW CONTACT</p>
-        <Link to="/newcontact">
-          <FaAddressBook size="30px" />
-        </Link>
-      </div>
       <div className="contacts-container">
         <table className="contacts-table">
           <thead>
@@ -60,7 +54,7 @@ const AllContacts = () => {
                   <td>{contact.email}</td>
                   <td>{contact.company.name}</td>
                   <td>
-                    <Link to={`/editcontact/${contact.contact_id}`}>
+                    <Link to={`/editcontact/${contact.contact_id}`} className="link">
                       <FaEdit size="25px" />
                     </Link>
                   </td>

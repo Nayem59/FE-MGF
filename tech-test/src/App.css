@@ -32,3 +32,32 @@ th {
 thead {
   background-color: #bababa;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+.link:hover {
+  color: rgb(156, 156, 156);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #717171;
+}
+
+.nav-item {
+  display: flex;
+  border: solid 2px;
+  border-radius: 10px;
+  box-shadow: rgb(75, 75, 75) 3px 3px;
+  margin: 5px;
+  align-items: center;
+}
+
+p {
+  padding: 0px 5px;
+}
