@@ -11,3 +11,24 @@ h1 {
 .all-contacts {
   margin-top: 50px;
 }
+
+table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 5px;
+  border-style: solid;
+  color: #000000;
+}
+
+td,
+th {
+  border-width: 5px;
+  border-color: #4f4f4f;
+  border-style: solid;
+  padding: 5px;
+}
+
+thead {
+  background-color: #bababa;
+}
