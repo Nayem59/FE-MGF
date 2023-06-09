@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
+import { getContacts } from "../api/api";
 
 const AllContacts = () => {
+  const [contacts, setContacts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  console.log(contacts, "contacts");
+
+  useEffect(() => {
+    setIsLoading(true);
+    getContacts().then((data) => {
+      setContacts(data);
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="all-contacts">
       <h2>All Contacts</h2>
       <div className="contacts-container">
-        <table class="contacts-table">
+        <table className="contacts-table">
           <thead>
             <tr>
               <th>Id</th>
@@ -18,16 +36,20 @@ const AllContacts = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Simohamed</td>
-              <td>Akniouene</td>
-              <td>akniouene.s@example.com</td>
-              <td>Example Design Ltd</td>
-              <td>
-                <FaEdit />
-              </td>
-            </tr>
+            {contacts.map((contact) => {
+              return (
+                <tr key={contact.contact_id}>
+                  <td>{contact.contact_id}</td>
+                  <td>{contact.firstname}</td>
+                  <td>{contact.lastname}</td>
+                  <td>{contact.email}</td>
+                  <td>{contact.company.name}</td>
+                  <td>
+                    <FaEdit />
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
